@@ -44,17 +44,17 @@ COMMON_GLOBAL_CFLAGS += -DSTE_HARDWARE -DSTE_SAMSUNG_HARDWARE
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
-TARGET_PREBUILT_KERNEL := device/samsung/golden/rootfs/kernel
+TARGET_PREBUILT_KERNEL := device/samsung/skomer/rootfs/kernel
 TARGET_NO_INITLOGO := true
 ARM_EABI_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/novatp/bin
-#TARGET_KERNEL_SOURCE := kernel/samsung/golden
-#TARGET_KERNEL_CONFIG := cm_golden_defconfig
+#TARGET_KERNEL_SOURCE := kernel/samsung/skomer
+#TARGET_KERNEL_CONFIG := cyanogenmod_skomer_defconfig
 #TARGET_USE_ST_ERICSSON_KERNEL := true
 
 # Graphics
 USE_OPENGL_RENDERER := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
-BOARD_EGL_CFG := device/samsung/golden/prebuilt/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/samsung/skomer/prebuilt/lib/egl/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DFORCE_SCREENSHOT_CPU_PATH -DWORKAROUND_BUG_10194508
 
 # Audio
@@ -66,8 +66,8 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/golden/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/golden/bluetooth/btvendor_golden.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/skomer/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/skomer/bluetooth/btvendor_skomer.txt
 
 # Wi-Fi related defines
 BOARD_WLAN_DEVICE := bcmdhd
@@ -87,7 +87,7 @@ WIFI_DRIVER_MODULE_AP_ARG := "firmware_path=/system/etc/wifi/bcmdhd_apsta.bin nv
 BOARD_NO_APSME_ATTR := true
 
 # Misc
-BOARD_RIL_CLASS := ../../../device/samsung/golden/ril/
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/golden/include
-TARGET_RECOVERY_FSTAB := device/samsung/golden/rootfs/fstab.samsunggolden
+BOARD_RIL_CLASS := ../../../device/samsung/skomer/ril/
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/skomer/include
+TARGET_RECOVERY_FSTAB := device/samsung/skomer/rootfs/fstab.samsungskomer
 RECOVERY_FSTAB_VERSION := 2
