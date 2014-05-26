@@ -14,4 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo cm_golden-userdebug
+add_lunch_combo cm_skomer-userdebug
+add_lunch_combo cm_skomer-eng
