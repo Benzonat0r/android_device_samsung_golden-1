@@ -21,11 +21,11 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Device identifier
-PRODUCT_DEVICE := golden
-PRODUCT_NAME := golden
+PRODUCT_DEVICE := skomer
+PRODUCT_NAME := skomer
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := GT-I8190
+PRODUCT_MODEL := GT-S7710
 PRODUCT_MANUFACTURER := samsung
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/samsung/golden/device.mk)
+$(call inherit-product, device/samsung/skomer/device.mk)
