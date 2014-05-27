@@ -508,8 +508,9 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_COPY_FILES += \
     device/samsung/skomer/prebuilt/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
-    device/samsung/skomer/prebuilt/usr/share/camera/config_file/samsung_s5k4ecgx_golden.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_golden.dat \
-    device/samsung/skomer/prebuilt/usr/share/camera/config_file/siliconfile_sr030pc50.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50.dat
+    device/samsung/skomer/prebuilt/usr/share/camera/config_file/aptina_mt9v113.dat:system/usr/share/camera/config_file/aptina_mt9v113.dat \
+    device/samsung/skomer/prebuilt/usr/share/camera/config_file/sony_isx012_skomer.dat:system/usr/share/camera/config_file/sony_isx012_skomer.dat \
+    device/samsung/skomer/prebuilt/usr/share/camera/config_file/siliconfile_sr030pc50_skomer.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50_skomer.dat
 
 # Precompiled STE audio
 PRODUCT_COPY_FILES += \
