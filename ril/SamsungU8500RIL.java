@@ -158,10 +158,10 @@ public class SamsungU8500RIL extends RIL implements CommandsInterface {
     static final int RIL_UNSOL_UTS_GET_UNREAD_SMS_STATUS = 11031;
     static final int RIL_UNSOL_MIP_CONNECT_STATUS = 11032;
 
-    protected HandlerThread mGoldenRILThread;
-    protected ConnectivityHandler mGoldenRILHandler;
+    protected HandlerThread mSamsungU8500RILThread;
+    protected ConnectivityHandler mSamsungU8500RILHandler;
 
-    public GoldenRIL(Context context, int networkMode, int cdmaSubscription) {
+    public SamsungU8500RIL(Context context, int networkMode, int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
         mQANElements = 5;
     }
@@ -204,21 +204,21 @@ public class SamsungU8500RIL extends RIL implements CommandsInterface {
 
         if(NeedReconnect())
         {
-            if (mGoldenRILHandler == null) {
+            if (mSamsungU8500RILHandler == null) {
 
-                handlerThread = new HandlerThread("mGoldenRILThread");
-                mGoldenRILThread = handlerThread;
+                handlerThread = new HandlerThread("mSamsungU8500RILThread");
+                mSamsungU8500RILThread = handlerThread;
 
-                mGoldenRILThread.start();
+                mSamsungU8500RILThread.start();
 
-                looper = mGoldenRILThread.getLooper();
-                mGoldenRILHandler = new ConnectivityHandler(mContext, looper);
+                looper = mSamsungU8500RILThread.getLooper();
+                mSamsungU8500RILHandler = new ConnectivityHandler(mContext, looper);
             }
-            mGoldenRILHandler.setPreferedNetworkType(networkType, response);
+            mSamsungU8500RILHandler.setPreferedNetworkType(networkType, response);
         } else {
-            if (mGoldenRILHandler != null) {
-                mGoldenRILThread = null;
-                mGoldenRILHandler = null;
+            if (mSamsungU8500RILHandler != null) {
+                mSamsungU8500RILThread = null;
+                mSamsungU8500RILHandler = null;
             }
             sendPreferedNetworktype(networkType, response);
         }
