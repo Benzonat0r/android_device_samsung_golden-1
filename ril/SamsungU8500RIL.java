@@ -73,7 +73,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
-public class GoldenRIL extends RIL implements CommandsInterface {
+public class SamsungU8500RIL extends RIL implements CommandsInterface {
 
     //SAMSUNG STATES
     static final int RIL_REQUEST_GET_CELL_BROADCAST_CONFIG = 10002;
